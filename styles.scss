@@ -1,0 +1,43 @@
+$calc-width: 300px;
+
+#calculator {
+  width: $calc-width;
+  height: $calc-width * 1.5;
+  background-color: gray;
+  margin: 100px auto;
+  border-radius: 10px;
+}
+
+#numDisplay {
+  width: $calc-width;
+  height: $calc-width * 0.25;
+  margin: auto;
+  padding: 5px;
+  //   background-color: darkslategrey;
+  color: rgb(240, 240, 240);
+  text-align: right;
+  font-size: 50px;
+}
+
+#button-wrapper {
+  width: $calc-width;
+  height: $calc-width * 1.25;
+  background-color: rgb(79, 79, 79);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "seven eight nine divide"
+    "four five six multiply"
+    "one two three subtract"
+    "zero zero decimal add"
+    ". clear allclear equals";
+}
+
+.btn {
+  margin: 10px;
+  border-radius: 100%;
+}
